@@ -1,15 +1,12 @@
 # Laravel Setting
 
-Persistent configuration settings for Laravel - Create, Read, Update and Delete settings stored in cache
+Persistent configuration settings for Laravel - Create, Read, Update and Delete settings stored in files using JSON.
 
 This package was the result of me not being able to save new settings to config files in a more persistent way.
 
 This package was designed not to replace the config solution currently offered by Laravel but rather complement it and be used in unison with it.
 
-If you need to store permanent data then creating a config file is still the best way.
-
-FAST!
-It uses the standard Laravel cache system so it's lightning fast.
+By default the data is stored in app_path().'/storage/meta/setting.json' but this can eaisly be changed either in the config file or on the fly realtime.
 
 ## Installation
 Require this package in your composer.json:
@@ -22,7 +19,16 @@ And add the ServiceProvider to the providers array in app/config/app.php
 
 ## Usage
 
-Just think arrays :)
+Config
+
+    return array(
+    'path'     => app_path().'/storage/meta',
+    'filename' => 'setting.json',
+    );
+
+It's simple to use - just think arrays :)
+
+set is an alias for put so you can use either
 
 Single dimension
 
