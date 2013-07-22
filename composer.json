@@ -1,0 +1,22 @@
+{
+    "name": "philf/setting",
+    "description": "Persistant configuration settings for Laravel - Create, read, update, delete settings stored in cache",
+    "keywords": ["laravel", "config", "cache"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Phil Foulston",
+            "email": "info@weztec.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.0.x"
+    },
+    "autoload": {
+        "psr-0": {
+            "Philf\\Setting": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
