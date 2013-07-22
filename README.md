@@ -11,7 +11,7 @@ By default the data is stored in app_path().'/storage/meta/setting.json' but thi
 ## Installation
 Require this package in your composer.json:
 
-    "philf/setting": "1.*"
+    "philf/setting": "dev-master"
 
 And add the ServiceProvider to the providers array in app/config/app.php
 
