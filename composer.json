@@ -1,7 +1,7 @@
 {
     "name": "philf/setting",
-    "description": "Persistant configuration settings for Laravel - Create, read, update, delete settings stored in cache",
-    "keywords": ["laravel", "config", "cache"],
+    "description": "Persistent configuration settings for Laravel - Create, Read, Update and Delete settings stored in files using JSON",
+    "keywords": ["laravel", "config"],
     "license": "MIT",
     "authors": [
         {
