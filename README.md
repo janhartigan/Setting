@@ -48,7 +48,7 @@ Multi dimensional
 
 Using a different path (make sure the path exists and is writable) *
 
-    Setting::path('setting2.json')->set(array('names2' => array('firstname' => 'Phil', 'surname' => 'F')));
+    Setting::path(app_path().'/storage/meta/sub')->set(array('names2' => array('firstname' => 'Phil', 'surname' => 'F')));
 
 Using a different filename
 
