@@ -1,7 +1,5 @@
 <?php namespace Philf\Setting;
 
-use Illuminate\Config\Repository;
-
 /*
  * ---------------------------------------------
  * | Do not remove!!!!                         |
@@ -45,13 +43,6 @@ use Illuminate\Config\Repository;
 class Setting {
 
     /**
-     * Illuminate config repository.
-     *
-     * @var Illuminate\Config\Repository
-     */
-    protected $config;
-
-    /**
      * The path to the file
      * @var string
      */
@@ -69,11 +60,15 @@ class Setting {
      */
     protected $settings;
 
-    public function __construct(Repository $config)
+    /**
+     * Create the Setting instance
+     * @param string $path      The path to the file
+     * @param string $filename  The filename
+     */
+    public function __construct($path, $filename)
     {
-        $this->config     = $config;
-        $this->path       = $this->config->get('setting::setting.path');
-        $this->filename   = $this->config->get('setting::setting.filename');
+        $this->path       = $path;
+        $this->filename   = $filename;
 
         // Load the file and store the contents in $this->settings
         $this->load($this->path, $this->filename);
